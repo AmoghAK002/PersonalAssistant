@@ -35,5 +35,15 @@ $(document).ready(function () {
             sync:true,
          },
     });
+
+    //Mic Button Click Event
+    
+    $("#MicBtn").click(function () { 
+      
+        
+        $("#Oval").attr("hidden", true);
+        $("#SiriWave").attr("hidden", false);
+        eel.playAssistantSound();
+    });
     
 });
