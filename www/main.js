@@ -32,6 +32,6 @@ $(document).ready(function () {
         $("#Oval").attr("hidden", true);
         $("#SiriWave").attr("hidden", false);
         eel.playAssistantSound();
-        eel.takecommand(); // Corrected usage
+        eel.allCommands(); // Corrected this line
     });
 });
