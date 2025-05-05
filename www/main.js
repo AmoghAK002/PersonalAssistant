@@ -34,4 +34,18 @@ $(document).ready(function () {
         eel.playAssistantSound();
         eel.allCommands(); // Corrected this line
     });
+
+    document.addEventListener("keyup", (e) => {
+        if (e.key.toLowerCase() === 'j' && e.metaKey) {
+            try {
+                eel.playAssistantSound();
+                $("#Oval").attr("hidden", true);
+                $("#SiriWave").attr("hidden", false);
+                eel.allCommands()(); // Assuming this returns a function
+            } catch (error) {
+                console.error("Eel function call failed:", error);
+            }
+        }
+    });
+    
 });
